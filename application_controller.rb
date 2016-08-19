@@ -59,12 +59,26 @@ class ApplicationController < Sinatra::Base
   end
 
    get '/4_search_bag' do
+     @link = shoot
       erb :"4_search_bag"
     end
+
+  get '/5_live_shooting_the_zombie' do
+    erb :"5_live_shooting_the_zombie"
+  end
+
+   get '/5_you_die_shooting_the_zombie' do
+    erb :"5_you_die_shooting_the_zombie"
+  end
+
+
     get'/4_walk_away'do
       erb :"4_walk_away"
     end
-
+  get '/4_what_get_bag' do
+    erb :"4what_get_bag"
+    @bag_supplies=bag_supplies
+  end
  get'/4_hello'do
       erb :"4_hello"
     end
@@ -104,4 +118,13 @@ class ApplicationController < Sinatra::Base
   get'/5_hot_wire_car' do
     erb :"5_hot_wire_car"
   end
+
+  get'/6_car_car' do
+    erb :"6_car_car"
+  end
+
+  get'/6_car_run' do
+    erb :"6_car_run"
+  end
+  
 end
